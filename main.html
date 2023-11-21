@@ -3,21 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css"/>
     <title>Niklas Pellis gästbok</title>
   </head>
   <body>
     <h1>Niklas Pellis gästbok!</h1>
     <p>Välkommen till min lilla gästbok! Skicka gärna ett meddelande!</p>
-    <form action="/get-route" method="get">
+    <form action="/" method="post">
       <label>Namn</label>
-      <input type="text" name="name"/>
+      <input required type="text" name="author"/>
       <labe>Ort</label>
-      <input type="text" name="name" />
+      <input required="text" name="zip" />
       <br>
-      <textarea name="message" type="text" style="width:200px; height:200px;">
-        Skriv ditt meddelande!
+      <textarea required name="content" type="text" style="width:200px; height:200px;" placeholder="Skriv ditt meddelande!">
+        
         </textarea>
       <input type="submit" />
     </form>
+
+    <h2>Inlägg:</h2>
+   
+***GÄSTER***
+
+
+   
+
+
+    
   </body>
 </html>
