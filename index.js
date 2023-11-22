@@ -9,6 +9,8 @@ let httpServer = app.listen(port, function () {
     
 app.use(express.urlencoded({ extended: true })); // behövs för att processa data som skickats med POST
 
+app.use(express.static('css'))
+
 let fs = require("fs");
 
 
@@ -17,6 +19,8 @@ app.get("/", function (req, res) {
 });
 
 app.post("/checklogin", function (req, res) {
+
+  
   let users = JSON.parse(fs.readFileSync("users.json").toString()); // läs in JSON-fil och konvertera till en array med JavaScript-objekt
   console.log(users);
   for (i in users) {
@@ -30,7 +34,7 @@ app.post("/checklogin", function (req, res) {
   let output = fs.readFileSync("login.html").toString();
   output = output.replace(
     "<body>",
-    "<body>LOGIN FAILED! PLEASE TRY AGAIN!<br>"
+    "<body>Fel login!! Testa igen!<br>"
   );
   res.send(output);
 });
@@ -38,6 +42,34 @@ app.post("/checklogin", function (req, res) {
 
 
 app.get("/",function (req, res) {
+  const dateObject = new Date();
+// current date
+// adjust 0 before single digit date
+const date = (`0 ${dateObject.getDate()}`).slice(-2);
+ 
+// current month
+const month = (`0 ${dateObject.getMonth() + 1}`).slice(-2);
+ 
+// current year
+const year = dateObject.getFullYear();
+ 
+// current hours
+const hours = dateObject.getHours();
+ 
+// current minutes
+const minutes = dateObject.getMinutes();
+ 
+// current seconds
+const seconds = dateObject.getSeconds();
+ 
+// prints date in YYYY-MM-DD format
+console.log(`${year}-${month}-${date}`);
+ 
+// prints date & time in YYYY-MM-DD HH:MM:SS format
+console.log(`${year}-${month}-${date} ${hours}:${minutes}:${seconds}`);
+ 
+// prints time in HH:MM format
+console.log(`${hours}:${minutes}`);
   
     let inlagg = fs.readFileSync("inlagg.json").toString();
     inlagg = JSON.parse(inlagg);
@@ -46,7 +78,8 @@ app.get("/",function (req, res) {
     console.log(inlagg);
     let output = "";
     for (let i = 0; i < inlagg.length;) {
-      output += `<p>${inlagg[i].author} skriver: ${inlagg[i].content}</p>`;
+      
+      output += `${year}-${month}-${date} ${hours}:${minutes}:${seconds}<p>${inlagg[i].author} skriver: ${inlagg[i].content}</p>`;
     }
     let html = fs.readFileSync("main.html").toString();
     html = html.replace("***GÄSTER***", output);
@@ -54,6 +87,34 @@ app.get("/",function (req, res) {
 });
 
 app.post("/", function (req, res) {
+  const dateObject = new Date();
+  // current date
+  // adjust 0 before single digit date
+  const date = (`0 ${dateObject.getDate()}`).slice(-2);
+   
+  // current month
+  const month = (`0 ${dateObject.getMonth() + 1}`).slice(-2);
+   
+  // current year
+  const year = dateObject.getFullYear();
+   
+  // current hours
+  const hours = dateObject.getHours();
+   
+  // current minutes
+  const minutes = dateObject.getMinutes();
+   
+  // current seconds
+  const seconds = dateObject.getSeconds();
+   
+  // prints date in YYYY-MM-DD format
+  console.log(`${year}-${month}-${date}`);
+   
+  // prints date & time in YYYY-MM-DD HH:MM:SS format
+  console.log(`${year}-${month}-${date} ${hours}:${minutes}:${seconds}`);
+   
+  // prints time in HH:MM format
+  console.log(`${hours}:${minutes}`);
   let inlagg = fs.readFileSync("inlagg.json").toString();
   inlagg = JSON.parse(inlagg);
 
@@ -65,10 +126,11 @@ app.post("/", function (req, res) {
 
   let output = "";
   for (let i = 0; i < inlagg.length; i++) {
-    output += `<p><b>${inlagg[i].author} </b> från ${inlagg[i].zip} skriver: <br> <em> ${inlagg[i].content}</em> </p>`
+    
+    output += `<br>${year}-${month}-${date} ${hours}:${minutes}:${seconds}<p><b>${inlagg[i].author} </b> från ${inlagg[i].zip} skriver: <br> <em> ${inlagg[i].content}</em> </p>`
   }
   let html = fs.readFileSync("main.html").toString();
-  html = html.replace("***GÄSTER***", output);
+  html = html.replace("***INLÄGG***", output);
   res.send(html);
 location.reload();
 

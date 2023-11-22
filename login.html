@@ -3,18 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Niklas Gästbok</title>
   </head>
   <body>
-    <h1>Hej</h1>
-    <p>Välkommen till min Gästbok, skriv in dina inloggningsuppgifter!</p>
+    <main>
+      <h1>Hej</h1>
+      <div class="container">
+        <div class="child">
+          <p>Välkommen till min Gästbok!</p>
+          <p>Skriv in dina inloggningsuppgifter!</p>
 
-    <form action="/checklogin" method="post">
-      <label for="">Användarnamn</label>
-      <input type="text" name="user" />
-      <label for="">Lösenord</label>
-      <input name="pass" type="text" />
-      <input type="submit" />
-    </form>
+          <form action="/checklogin" method="post">
+            <label for="">Användarnamn:</label>
+            <input type="text" name="user" />
+            <label for="">Lösenord:</label>
+            <input name="pass" type="text" />
+            <button type="submit"  class="button"/>Logga in </button>
+          </form>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

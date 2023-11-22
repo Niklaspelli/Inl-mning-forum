@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+   
+    place-content: center;
+    margin: 0;
+}
+
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(#02173f, #0a315e);
+    background-size: cover;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+h1, h2{
+    color: pink;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container{
+    
+     display: flex;
+    align-content: center;
+    justify-content: center;  
+    border: 5px white;  
+    
+
+}
+
+.child{
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 300px;
+    align-items: center;
+    text-align: center;
+    border: 10px rgb(41, 39, 39);
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10%;
+    color: white;
+    margin-bottom: 40px;
+}
+
+input[type=text] {
+    color: white;
+    background-color: #0a315e;
+    border: none;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 15px;
+  }
+
+  
+
+  label{
+    color: rgb(206, 13, 231);
+    margin-bottom: 10px;
+  
+  }
+
+textarea{
+    border-radius: 15px;
+    color: white;
+    background-color: #0a315e;
+    box-sizing: border-box;
+    resize: none;
+    height: 100px;
+    border: none;
+    width: 100%;
+    
+}
+::placeholder {
+    color: rgb(253, 249, 249);
+    opacity: 1; /* Firefox */
+  }
+  
+
+.button{
+    color: white;
+    background-color: #04849b;
+    cursor: pointer;
+    margin: 40px;
+    border-radius: 15px;
+    border: 5px;
+    height: 40px;
+    width: 70px;
+    font-style: italic;
+    font-size: 15px;
+}
+
+
+.inlagg{
+    border: 10px 10px black;
+    margin: 40px;
+}
+
+@media (max-width: 800px) {
+    .container {
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+  
+  
+  @media screen and (min-width: 480px) {
+  
+    .container{
+        display: flex;
+        height: 100px;
+        align-items: center;
+        align-content: space-between;
+    }

@@ -3,32 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles.css" />
     <title>Niklas Pellis gästbok</title>
   </head>
   <body>
-    <h1>Niklas Pellis gästbok!</h1>
-    <p>Välkommen till min lilla gästbok! Skicka gärna ett meddelande!</p>
-    <form action="/" method="post">
-      <label>Namn</label>
-      <input required type="text" name="author"/>
-      <labe>Ort</label>
-      <input required="text" name="zip" />
-      <br>
-      <textarea required name="content" type="text" style="width:200px; height:200px;" placeholder="Skriv ditt meddelande!">
-        
-        </textarea>
-      <input type="submit" />
-    </form>
+    <main>
+      <h1>Niklas Pellis gästbok!</h1>
 
-    <h2>Inlägg:</h2>
-   
-***GÄSTER***
+      <div class="container">
+        <div class="child">
+          <p>Välkommen till min lilla gästbok!</p>
+          <p>Skicka gärna ett meddelande!</p>
+          <form action="/" method="post">
+            <label>Namn:</label>
+            <input required type="text" name="author" />
+            <label>Ort:</label>
+            <input required="text" name="zip" type="text" />
 
+            <label>Meddelande:</label>
+            <textarea
+              required
+              name="content"
+              type="text"
+              placeholder="Skriv ditt meddelande!"
+            >
+            </textarea>
 
-   
+            <input type="submit" class="button" />
+          </form>
 
-
-    
+          <h2>Senaste inlägg:</h2>
+          <div class="inlagg">***INLÄGG***</div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
