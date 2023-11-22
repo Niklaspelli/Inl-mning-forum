@@ -127,7 +127,7 @@ app.post("/", function (req, res) {
   let output = "";
   for (let i = 0; i < inlagg.length; i++) {
     
-    output += `<br>${year}-${month}-${date} ${hours}:${minutes}:${seconds}<p><b>${inlagg[i].author} </b> från ${inlagg[i].zip} skriver: <br> <em> ${inlagg[i].content}</em> </p>`
+    output += `<br><p style="color: green;">${year}-${month}-${date} ${hours}:${minutes}:${seconds}</p><b><p>${inlagg[i].author} </b> från ${inlagg[i].zip} skriver: <br> <em> ${inlagg[i].content}</em> </p>`
   }
   let html = fs.readFileSync("main.html").toString();
   html = html.replace("***INLÄGG***", output);
