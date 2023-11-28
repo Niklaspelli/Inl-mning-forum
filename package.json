@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "fs": "^0.0.1-security"
+    "bcrypt": "^5.1.1",
+    "fs": "^0.0.1-security",
+    "time-stamp": "^2.2.0"
   }
 }

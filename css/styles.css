@@ -35,14 +35,15 @@ h2 {color: rgb(172, 27, 152);
 
 }
 
+a{
+    color: white;
+}
+
 .container{
     
      display: flex;
     align-content: center;
     justify-content: center;  
-    border: 5px white;  
-    
-
 }
 
 .child{
@@ -92,7 +93,7 @@ textarea{
 }
 ::placeholder {
     color: rgb(253, 249, 249);
-    opacity: 1; /* Firefox */
+    opacity: 1; 
   }
   
 
@@ -111,8 +112,24 @@ textarea{
 
 
 .inlagg{
-    border: 10px 10px black;
-    margin: 40px;
+    
+    height: 100%;
+    width: 300px;
+    border: 2px  solid rgb(30, 71, 182);
+    border-radius: 15px;
+    background: rgb(30, 71, 182);
+    margin-bottom: 20px;
+
+    
+}
+
+.center-inlagg{
+    
+    align-content: center;
+    justify-content: center;  
+    padding: 10px;
+     
+
 }
 
 @media (max-width: 800px) {
