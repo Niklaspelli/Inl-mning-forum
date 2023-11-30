@@ -92,7 +92,7 @@ textarea{
     
 }
 ::placeholder {
-    color: rgb(253, 249, 249);
+    color: white;
     opacity: 1; 
   }
   
@@ -138,7 +138,7 @@ textarea{
       align-content: center;
       align-items: center;
     }
-  
+}
   
   @media screen and (min-width: 480px) {
   
@@ -148,3 +148,4 @@ textarea{
         align-items: center;
         align-content: space-between;
     }
+}
