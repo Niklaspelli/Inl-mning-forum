@@ -61,7 +61,7 @@ a{
     margin-bottom: 40px;
 }
 
-input[type=text] {
+input[type=text], [type=password]  {
     color: white;
     background-color: #0a315e;
     border: none;
